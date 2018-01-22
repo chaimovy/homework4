@@ -12,7 +12,7 @@ public class Panel implements Observer {
 		id=counter;
 		counter++;
 		
-	}
+	}//arrr
 	@Override
 	public void update(Observable o, Object arg) {
 		color=(Color)arg;
