@@ -1,6 +1,8 @@
 package homework4;
 import javax.swing.Timer;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class ColorGenerator {
@@ -8,19 +10,16 @@ public class ColorGenerator {
 	private Color color;
 	private Timer t;
 	
-	protected ColorGenerator(
-			) {
+	protected ColorGenerator() {
 		genColor();
-		int delay = 1000; // delay for 1 sec. 
-		int period = 10000; // repeat every 10 sec. 
-		Timer timer = new Timer(period, null); 
-		timer.scheduleAtFixedRate(new TimerTask() 
-		    { 
-		        public void run() 
-		        { 
-		            displayData();  // display the data
-		        } 
-		    }, delay, period);  
+		t = new Timer(2000, new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				updateColor();
+			}
+		});
 	}
 	public static ColorGenerator getInstance() {
 		if (colorGenerator==null)
