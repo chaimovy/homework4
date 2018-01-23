@@ -1,4 +1,5 @@
 package homework4;
+
 import javax.swing.Timer;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -20,6 +21,7 @@ public class ColorGenerator {
 				updateColor();
 			}
 		});
+		t.start();
 	}
 	public static ColorGenerator getInstance() {
 		if (colorGenerator==null)
@@ -34,12 +36,9 @@ public class ColorGenerator {
 		color = new Color(r, g, b);
 	}
 	public Color getColor() {
-		
 		return color;
 	}
 	private void updateColor() {
-		
 		genColor();
 	}
-
 }

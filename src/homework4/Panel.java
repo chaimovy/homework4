@@ -12,12 +12,11 @@ public class Panel implements Observer {
 		id=counter;
 		counter++;
 		
-	}//arrr
-	@Override
-	public void update(Observable o, Object arg) {
-		color=(Color)arg;
-		
 	}
-	//fhfgdfg f u 
+	@Override
+	public void update(Observable billboard, Object arg) {
+		Billboard bb = (Billboard)billboard;
+		color = bb.getColor();
+	}
 
 }
