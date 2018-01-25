@@ -1,8 +1,6 @@
 package homework4;
 
-import java.awt.Dimension;
 import java.awt.FlowLayout;
-
 import javax.swing.JFrame;
 import javax.swing.JTable;
 
